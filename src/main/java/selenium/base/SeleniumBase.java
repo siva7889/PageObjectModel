@@ -57,48 +57,17 @@ public class SeleniumBase extends Reporter {
 		}
 	}
 		
-		public void clickandhold(WebElement item1, WebElement item3,WebElement item7 ) {		
-			try {
-				Actions action = new Actions(driver);
-				action.clickAndHold (item1);
-				action.clickAndHold(item3);
-				action.clickAndHold(item7);
-				action.build().perform();
-			
-				reportStep("The Element has been selectable", "pass");
-			} catch (Exception e) {
-				reportStep("Select items failed", "fail");
-				System.err.println(e);
-			}
+			public void clickandhold(WebElement items) {		
+		try {
+			Actions builder = new Actions(driver);
+			builder.clickAndHold(items).build().perform();
+			reportStep("The Element has been selectable ", "pass");
+		} catch (Exception e) {
+			reportStep("Click and hold", "fail");
+			System.err.println(e);
 		}
-			
-			public void fieldsize (WebElement compactcar, WebElement carType, WebElement  automatic, 
-					WebElement insurance, WebElement  Compactcardown, WebElement Truck , WebElement standard, 
-					WebElement insurance2, WebElement booking)
-			{
-			
+	}
 				
-				
-		  try{
-				
-				Actions action1=new Actions(driver);
-				action1.click(compactcar).build().perform();
-				action1.click(carType).build().perform();
-				action1.click(automatic).build().perform();
-				action1.click(insurance).build().perform();
-				action1.click(Compactcardown).build().perform();
-				action1.click(Truck).build().perform();
-				action1.click(standard).build().perform();
-				action1.click(insurance2).build().perform();
-				action1.click(booking).build().perform();
-			
-				reportStep("The fieldest elements has been selected", "pass");
-			} catch (Exception e) {
-				reportStep("The fieldset elements are not selected", "fail");
-				System.err.println(e);
-			}
-			
-			}		
 			
 				
 			
