@@ -30,7 +30,9 @@ public class SelectablePage extends ProjectSpecificMethods {
 		
 		WebElement item3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='ui-widget-content ui-selectee' and text()='Item 3']")));
 		WebElement item7 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='ui-widget-content ui-selectee' and text()='Item 7']")));
-		clickandhold(item1,item3,item7);
+		clickandhold(item1);
+		clickandhold(item3);
+		clickandhold(item7);
 		return this;
 		
 		
