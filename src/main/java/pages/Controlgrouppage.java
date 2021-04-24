@@ -39,8 +39,15 @@ public class Controlgrouppage extends ProjectSpecificMethods {
 				 noOfcar2.sendKeys("1");
 				 WebElement booking=driver.findElement(By.id("book"));
 				 
-			fieldsize(compactcar,carType,automatic,  insurance,
-							 Compactcardown, Truck, standard,insurance2,booking);
+			click(compactcar);
+				 click(carType);
+				 click(automatic);
+				 click(insurance);
+				 click(Compactcardown);
+				 click(Truck);
+				 click(standard);
+				 click(insurance2);
+				 click(booking);
 				
 			 
 	
